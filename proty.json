@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "Critical",
+    "color": "#f1a7b"
+  },
+  {
+    "ref": "High",
+    "color": "#ee6c19"
+  },
+  {
+    "ref": "Med",
+    "color": "#fce205"
+  },
+  {
+    "ref": "Low",
+    "color": "#21a2e0"
+  }
+]

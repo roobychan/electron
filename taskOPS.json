@@ -1,0 +1,43 @@
+[{
+	"Name": "Analyze the US",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "Coding & Unit Testing",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "KT to tester for code changes",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "Functional test",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "KT to Praneeth for force UX change",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "Send PDN to Amar to add new test cases to automation test script",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}, {
+	"Name": "Send the analysis doc to Praneeth for non-product issue",
+	"Owner": {},
+	"Estimate": "4",
+	"ToDo": "4",
+	"Actuals": "4"
+}]

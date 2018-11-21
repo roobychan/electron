@@ -1,0 +1,110 @@
+[
+  {
+    "email": "biqiang.xiao@adp.com",
+    "name": "Biqiang",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/12332139018",
+    "project": "APAC"
+  },
+  {
+    "email": "james.gu@adp.com",
+    "name": "James",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/12332327104",
+    "project": "EUAM"
+  },
+  {
+    "email": "richard.sefton@adp.com",
+    "name": "Richard",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/15325042274",
+    "project": "APAC"
+  },
+  {
+    "email": "ke.xu2@adp.com",
+    "name": "Ke",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/36675776793",
+    "project": "APAC"
+  },
+  {
+    "email": "rooby.chen@adp.com",
+    "name": "Rooby",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/12332286377",
+    "project": "APAC"
+  },
+  {
+    "email": "madhuraj.soudathikar@adp.com",
+    "name": "Madhu",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/60781793883",
+    "project": "APAC"
+  },
+  {
+    "email": "raghupathi.jella@adp.com",
+    "name": "Raghu",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/55612858068",
+    "project": "APAC"
+  },
+  {
+    "email": "edmond.guan@adp.com",
+    "name": "Edmond",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/165064525256",
+    "project": "APAC"
+  },
+  {
+    "email": "nolan.zhang@adp.com",
+    "name": "Nolan",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/172345771032",
+    "project": "APAC"
+  },
+  {
+    "email": "kadari.praneeth@adp.com",
+    "name": "Praneeth",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/134795290364",
+    "project": "APAC"
+  },
+  {
+    "email": "pedro.bravo@adp.com",
+    "name": "Pedro",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/12332332573",
+    "project": "EUAM"
+  },
+  {
+    "email": "richard.ribier@adp.com",
+    "name": "Richard",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/12332105132",
+    "project": "EUAM"
+  },
+  {
+    "email": "francois.compain@adp.com",
+    "name": "Francois",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/14644714632",
+    "project": "EUAM"
+  },
+  {
+    "email": "sandy.hu@adp.com",
+    "name": "Sandy",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/15569498469",
+    "project": "APAC"
+  },
+  {
+    "email": "raghavendra.reddy.bokka@adp.com",
+    "name": "Raghav",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/114430286448",
+    "project": "EUAM"
+  },
+  {
+    "email": "vincent.wen@adpl.com",
+    "name": "Vincent",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/110132243488",
+    "project": "APAC"
+  },
+  {
+    "email": "wenqian.chen@adp.com",
+    "name": "Wenqian",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/21723583984",
+    "project": "APAC"
+  },
+  {
+    "email": "amarnath.gangigunta@adp.com",
+    "name": "Amar",
+    "ref": "https://rally1.rallydev.com/slm/webservice/v2.0/user/17262784252",
+    "project": "APAC"
+  }
+]

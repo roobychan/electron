@@ -1,0 +1,27 @@
+{
+  "name": "myRallyTool",
+  "productName": "myRallyTool",
+  "version": "1.0.0",
+  "description": "myRallyTool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Rooby",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "angular": "^1.7.5",
+    "bootstrap": "^4.1.3",
+    "electron": "^3.0.4",
+    "popper.js": "^1.14.4"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "jquery": "^3.3.1",
+    "lokijs": "^1.5.5",
+    "rally": "^2.1.2"
+  }
+}

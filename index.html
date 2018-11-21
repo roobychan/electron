@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html ng-app="myRallyTool">
+<head>
+  <meta charset="utf-8">
+  <script src="node_modules/angular/angular.min.js"></script>
+  <!-- <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+  <script>
+    window.$ = window.jQuery = require('jquery');
+    window.Bootstrap = require('bootstrap');
+  </script>
+  <script src="myRallyTool.js"></script>
+  <script src='myText.js'></script>
+  <script src='mySettings.js'></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+  <title></title>
+</head>
+<body>
+  <div class="float-right">
+    <button class="btn btn-danger btn-sm btn-block" type="button" data-toggle="collapse" data-target="#settings" aria-expanded="false" aria-controls="settings">Settings</button>
+  </div>
+
+  <div class="collapse" id="settings">
+    <div class="container shadow-lg rounded " style="width: 350px;" ng-controller="mySettings as ms">
+      <legend>Settings</legend>
+      <form ng-submit="ms.create()">
+        <div class="from-group row">
+          <label>API Key:</label>
+          <input type="text" ng-model="setAPIKey" class="form-control form-control-sm">
+        </div>
+        <div class="from-group row">
+          <label>Proxy URL:</label>
+          <input type="url" ng-model="setURL" class="form-control form-control-sm">
+        </div>
+        <div class="from-check">
+          <br>
+          <label class="form-check-label">
+            <input type="checkbox" ng-model="setDev" class="form-check-input">
+           Enable Debug
+          </label>
+
+        </div>
+          <input type="submit" value="Save Settings" class="btn btn-warning btn-sm btn-block">
+      </form>
+      </div>
+  </div>
+  <!-- <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active show text-warning" data-toggle="tab" href="#home" role="tab">Home</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active show text-warning" data-toggle="tab" href="#settings" role="tab">Settings</a>
+    </li>
+  </ul> -->
+  <!-- <div id="myTabContent" class="tab-content"> -->
+    <!-- <div class="tab-pane fade active show" id="home" role="tabpanel"> -->
+      <div class="container ng-cloak shadow-lg rounded" style="width: 350px;"ng-controller="myRallyController as mr">
+        <legend>Create User Story</legend>
+        <form ng-submit="mr.create()" class="form-group">
+          <div class="from-group row">
+            <label>CRM:</label>
+            <input ng-model="userStory.crm" size = "10" required="true" type = "number" min="2500000000" max="2599999999" limit="10" class="form-control form-control-sm">
+          </div>
+          <div class="from-group row">
+            <label>Description:</label>
+            <input type="text" ng-model="inputName" size = "100" required="true" class="form-control form-control-sm">
+          </div>
+          <div class="from-group row">
+            <label>Tag:</label>
+              <select ng-model="selectedTag" required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in tags" value={{u.ref}}>{{u.name}}</option>
+              </select>
+          </div>
+          <div class="from-group row">
+            <label>Issue Type:</label>
+              <select ng-model="userStory.utype" required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in utype" value="{{u}}">{{u}}</option>
+              </select>
+          </div>
+          <div class="from-group row">
+            <label>Application:</label>
+              <input type="text" ng-model="userStory.app" size="30" class="form-control form-control-sm">
+          </div>
+          <div class="from-group row">
+            <label>Priority:</label>
+              <select ng-model="selectedColor" required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in proty" value={{u.ref}}>{{u.ref}}</option>
+              </select>
+          </div>
+          <div class="from-group row">
+            <label>Owner:</label>
+              <select ng-model="selectedOwner" ng-change='mr.dropdownConvert()' required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in user | orderBy: 'email' " value={{u.ref}}>{{u.email}}</option>
+              </select>
+          </div>
+          <div ng-show="userStory.utype == 'Both end'" class="from-group row">
+            <label>Owner 2:</label>
+              <select ng-model="selectedOwner2" class="form-control form-control-sm">
+                <option ng-repeat="u in user | orderBy: 'email' " value={{u.ref}}>{{u.email}}</option>
+              </select>
+          </div>
+          <div class="from-group row">
+            <label>Tester:</label>
+              <select ng-model="selectedTowner" required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in user | orderBy: 'email' " value={{u.ref}}>{{u.email}}</option>
+              </select>
+          </div>
+          <div class="from-group row">
+            <label>Iteration:</label>
+              <select ng-model="selectedIter" required="true" class="form-control form-control-sm">
+                <option ng-repeat="u in itert | myFilter:userStory.owner.project | orderBy: 'itert': true" value="{{u.ref}}">{{u.project}}-{{u.itert}}</option>
+              </select>
+          </div>
+
+          <input type="submit" value="Create" class="btn btn-warning btn-sm btn-block">
+        </form>
+      </div>
+
+      <div class="container shadow-lg p-3 mb-5 rounded " style="width: 350px;" ng-controller="myTextController as mt" ng-hide="no_db">
+        <legend>Create User Story Text</legend>
+        <form ng-submit="mt.create()">
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input type="text" ng-model="usID" required="true" class="form-control form-control-sm" placeholder="User Story">
+              <div class="input-group-append">
+                <button class="btn btn-outline-warning btn-sm" type="submit">Retrieve</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div>
+          <p class="text-info">{{usText}}</p>
+        </div>
+      </div>
+    <!-- </div> -->
+    <!-- <div class="tab-pane fade" id="settings" role="tabpanel"> -->
+      <!-- <div class="container shadow-lg rounded " style="width: 350px;" ng-controller="mySettings as ms">
+        <form ng-submit="ms.create()">
+          <div class="from-group row">
+            <label>API Key:</label>
+            <input type="text" ng-model="setAPIKey" class="form-control form-control-sm"></div>
+          <div class="from-group row">
+            <label>Proxy URL:</label>
+            <input type="url" ng-model="setURL" class="form-control form-control-sm"></div>
+        </form>
+      </div> -->
+    <!-- </div> -->
+  </div>
+</body>
+</html>
